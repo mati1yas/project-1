@@ -1,0 +1,173 @@
+void search1 (char a){
+int Num_search[20],counter=0;
+switch (a){
+case 'a':{cin.ignore();
+system ("cls");
+cout<<"\n\n\n"<<"           "<<"Please insert the title of the book"<<endl;
+string searchName,temp_title;
+getline (cin, searchName);
+ transform (searchName.begin(),searchName.end(),searchName.begin(),:: tolower);
+for (int i=0;i<20;i++){
+    temp_title=book[i].title;
+transform (temp_title.begin(),temp_title.end(),temp_title.begin(),:: tolower);
+        if (temp_title==searchName){
+      Num_search[counter]=i;
+      counter++;
+    }
+}
+   display (Num_search,counter);
+}
+case 'b':{cin.ignore();
+system ("cls");
+cout <<"\n\n\n"<<"           "<<"Please insert the Author of the book"<<endl;
+string searchName,temp_autohr;
+getline (cin, searchName);
+ transform (searchName.begin(),searchName.end(),searchName.begin(),:: tolower);
+
+for (int i=0;i<20;i++){
+    temp_autohr=book[i].author;
+transform (temp_autohr.begin(),temp_autohr.end(),temp_autohr.begin(),:: tolower);
+        if (temp_autohr==searchName){
+      Num_search[counter]=i;
+      counter++;
+    }
+}
+
+display (Num_search,counter);
+}
+case 'c':{;
+system ("cls");
+cout <<"\n\n\n"<<"           "<<"Please insert the ISBN of the book"<<endl;
+int isbn;
+cin >>isbn;
+for (int i=0;i<=20;i++){
+if (isbn==book[i].isbn){
+        Num_search[counter]=i;
+    counter++;
+                }
+            }
+display (Num_search,counter);
+
+        }
+    }
+
+}
+
+void listbook (char a){
+switch(a){
+case 'd': list_by_catagory();
+    break;
+case 'e': most_read_book();
+    break;
+case 'f': by_rating();
+    break;
+case 'g': recent_books();
+    break;
+case 'h': all_books();
+}
+}
+void list_by_catagory(){
+            system("cls");
+       cout <<"\n\n\n\n"<<endl;
+        cout << setw(15)<< char(176);      for(int i=0; i<90; i++){cout << char(205);} cout << char(176)<< endl;
+        cout << setw(15)<< char(176)<<"choose category "<<endl;
+        cout << setw(20)<< char(176)<<"a, Fiction "<<endl;
+        cout << setw(20)<< char(176)<<"b, Science "<<endl;
+        cout << setw(20)<< char(176)<<"c, Art"<<endl;
+        cout << setw(20)<< char(176)<<"d, Self help"<<endl;
+        cout << setw(20)<< char(176)<<"e, Religious"<<endl;
+        cout << setw(20)<< char(176)<<"f, Social science "<<endl;
+        cout << setw(20)<< char(176)<<"g, Amhaaric"<<endl;
+        cout << setw(20)<< char(176)<<"h, Research book"<<endl;
+        cout << setw(20)<< char(176)<<"i, Programing "<<endl;
+int counter=0;
+char choice;
+cin >>choice;
+int Num_search[20];
+switch (choice){
+case 'a':{for (int i=0;i<=20;i++){
+if (((book[i].catagory=="Fiction"))==0 ){
+     Num_search[counter]=i;
+    counter++;
+    }
+}
+
+display (Num_search,counter);
+}
+
+case 'b':{ for (int i=1;i<=20;i++){
+    if ((book[i].catagory=="Science")){
+     Num_search[counter]=i;
+    counter++;
+    }
+}
+display (Num_search,counter);
+}
+case 'c':
+    {for (int i=1;i<=20;i++){
+    if ((book[i].catagory=="Art")){
+Num_search[counter]=i;
+    counter++;
+}
+display (Num_search,counter);
+}
+
+case 'd': {for (int i=0;i<20;i++){
+    if ((book[i].catagory=="Self help")){
+Num_search[counter]=i;
+    counter++;
+    }
+}
+display (Num_search,counter);
+
+}
+
+case 'e': {for (int i=0;i<20;i++){
+    if ((book[i].catagory=="Religous")){
+Num_search[counter]=i;
+    counter++;
+    }
+}
+display (Num_search,counter);
+
+}
+case 'f': {for (int i=0;i<20;i++){
+    if ((book[i].catagory=="Social science")){
+Num_search[counter]=i;
+    counter++;
+    }
+}
+display (Num_search,counter);
+
+}
+case 'g': {for (int i=0;i<20;i++){
+    if ((book[i].catagory=="Amharic")){
+    Num_search[counter]=i;
+    counter++;
+    }
+}
+display (Num_search,counter);
+
+}
+
+case 'h': {for (int i=0;i<20;i++){
+    if ((book[i].catagory=="Research books")){
+    Num_search[counter]=i;
+    counter++;
+    }
+}
+display (Num_search,counter);
+
+            }
+        }
+case 'i': {for (int i=0;i<20;i++){
+    if ((book[i].catagory=="Programming")){
+        Num_search[counter]=i;
+    counter++;
+        }
+    }
+display (Num_search,counter);
+
+            }
+        }
+}
