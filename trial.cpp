@@ -33,3 +33,16 @@ int num_issued_book=0;
 Book issued_book;
 Date issue_date,return_date;
 }user[100];
+
+void welcome();
+int main_menu();
+char user_option();
+void display(int[],int);
+void search1 (char a);
+void listbook (char a);
+void list_by_catagory();
+void most_read_book();
+void by_rating();
+void recent_books();
+void admin_option();
+void all_books();
