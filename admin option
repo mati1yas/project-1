@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+#include <windows.h>
+void display ();
+int main(){
+display();
+}
+void display (){
+    system ("cls");
+system ("color 04");
+
+    cout <<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"<<endl;
+    cout << setw(40)<< char(176);
+    for(int i=0; i<90; i++){cout << char(205);}
+    cout << char(176)<< endl;
+    system ("color F");
+    cout << setw(40)<< char(176);
+    cout <<setw(55)<<"Administrator option ?"<< setw(61)<< char(176)<<endl;
+    HANDLE u= GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(u,2);
+     cout << setw(40)<< char(176)<<setw(20)<<" "<<"Books"<<endl;
+    cout << setw(40)<< char(176)<<setw(5)<<" "<<"Book issue"<<endl;
+    cout << setw(40)<< char(176)<<setw(5)<<" "<<"Book deposit"<<endl;
+     cout << setw(40)<< char(176)<<setw(5)<<" "<<"Add book"<<endl;;
+      cout << setw(40)<< char(176)<<setw(5)<<" "<<"Modify book"<<endl;
+       cout << setw(40)<< char(176)<<setw(5)<<" "<<"Delete Book"<<endl;
+        cout << setw(40)<< char(176)<<setw(5)<<" "<<"Search specific book"<<endl;
+      cout << setw(40)<< char(176)<<setw(5)<<" "<<"Display all books"<<endl;
+      cout << setw(40)<< char(176)<<setw(5)<<" "<<"Display unreturned books"<<endl;
+       cout << setw(40)<< char(176)<<setw(20)<<"User "<<endl;;
+       cout << setw(40)<< char(176)<<setw(5)<<" "<<"Add user record"<<endl;
+      cout << setw(40)<< char(176)<<setw(5)<<" "<<"Modify user record"<<endl;
+       cout << setw(40)<< char(176)<<setw(5)<<" "<<"Delete user record"<<endl;
+        cout << setw(40)<< char(176)<<setw(5)<<" "<<"Search specific user record"<<endl;
+      cout << setw(40)<< char(176)<<setw(5)<<" "<<"Display all user record"<<endl;
+      cout << setw(40)<< char(176)<<setw(5)<<" "<<"Display all user record"<<endl;
+        cout << setw(40)<< char(176)<<setw(50)<<" "<<endl;
+    cout << setw(40)<< char(176);for(int i=0; i<90; i++){cout << char(205);}
+    cout << char(176)<< endl;
+    cout << setw(40)<< char(176);system ("pause");
+    cout << setw(91)<< char(176);
+
+}
