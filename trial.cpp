@@ -183,6 +183,7 @@ book[3]={"b103","Java","Matiyas ","A20","Programing",6,7892,2,{2010,04,10},0,0,f
 book[4]={"b104","sql","Matiyas ","A20","Programing",1,45587,2,{2020,04,15},0,0,false};
 
 //sample user
+  //ooo
 
 user[0].name="Lebamlak";
 user[0].user_id="u100";
