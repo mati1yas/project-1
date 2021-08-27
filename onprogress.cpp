@@ -41,7 +41,7 @@ Date issue_date,return_date;
 
 
 void welcome();
-int main_menu();
+void main_menu();
 void user_option();
 void display(int[],int);
 void search1 (char a);
@@ -79,21 +79,9 @@ int main(){
 
 welcome();
 sampleData();
- int z=main_menu();
-//bool stop=false;
+
 while(!stop){
-
-
-    switch (z){
-    case 1:{
-      user_option();
-             break;
-}
-
-    case 2: admin_option ();
-        break;
-
-    }
+   main_menu();
 }
 
 return 0;
@@ -145,7 +133,7 @@ user[4]={"Jima Agaro","u104",13,{7856,"0944444444"},0};
 
 
 
-int main_menu(){
+void main_menu(){
 system ("cls");
  int choice;
        cout <<"\n\n\n\n"<<endl;
@@ -156,7 +144,19 @@ system ("cls");
         cout << setw(15)<< char(176)<<"3. Exite"<<endl;
         cout << setw(15)<< char(176);      for(int i=0; i<90; i++){cout << char(205);} cout << char(176)<< endl;
         cin>>choice;
-        return choice;
+
+
+         switch (choice){
+    case 1:
+      user_option();
+        break;
+
+    case 2:
+    admin_option ();
+        break;
+    }
+
+
 }
 
 
@@ -861,10 +861,10 @@ system ("color 04");
        cout << setw(40)<< char(176)<<setw(5)<<"11,"<<"Delete user record"<<endl;
         cout << setw(40)<< char(176)<<setw(5)<<"12,"<<"Search specific user record"<<endl;
       cout << setw(40)<< char(176)<<setw(5)<<"13,"<<"Display all user record"<<endl;
-      cout << setw(40)<< char(176)<<setw(5)<<"14,"<<"Display all user record"<<endl;
+      cout << setw(40)<< char(176)<<setw(5)<<"14,"<<"Statics "<<endl;
         cout << setw(40)<< char(176)<<setw(50)<<" "<<endl;
         cout << setw(40)<< char(176)<<setw(50)<<" "<<endl;
-        cout << setw(40)<< char(176)<<setw(30)<<" "<<"your choice please:"; cin >>choice;
+        cout << setw(40)<< char(176)<<setw(30)<<" "<<"please your choice--> "; cin >>choice;
     cout << setw(40)<< char(176);for(int i=0; i<90; i++){cout << char(205);}
     cout << char(176)<< endl;
     cout << setw(40)<< char(176);system ("pause");
@@ -875,51 +875,49 @@ cin.clear();
 
 switch(choice){
 case 1:
-addbook();
+isueOrReturnbook('i');
     break;
-}
-
-/*case 2:
-
+case 2:
+isueOrReturnbook('r');
     break;
 case 3:
-
+addbook();
     break;
 case 4:
-
+ModifyBookDetail();
     break;
 case 5:
-
+deleteBook();
     break;
 case 6:
-
+search1('a');
     break;
 case 7:
-
+listbook('h');
     break;
 case 8:
 
     break;
 case 9:
-
+memberRegistration();
     break;
 
 case 10:
-
+ModifyMemberDetail();
     break;
 case 11:
-
+deleteMember();
     break;
-case :
-
-    break;
-case 1:
+/*case 13:
 
     break;
 case 1:
 
     break;
+case 1:
 
-*/
+    break;
+    */
+}
 
 }
